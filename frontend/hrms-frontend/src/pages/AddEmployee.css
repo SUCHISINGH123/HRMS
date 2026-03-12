@@ -1,0 +1,110 @@
+/* Full Page Background */
+.add-employee-page {
+  min-height: 100vh;
+  padding: 40px;
+  background: linear-gradient(135deg, #eef2f7, #dce3f1);
+}
+
+/* Main Container */
+.add-employee-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  max-width: 1200px;
+  margin: auto;
+  gap: 50px;
+}
+
+/* Left Info Section */
+.employee-info {
+  flex: 1;
+  padding: 40px;
+}
+
+.employee-info h1 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  color: #1f2d3d;
+}
+
+.employee-info p {
+  font-size: 16px;
+  margin-bottom: 30px;
+  color: #555;
+}
+
+.info-box {
+  background: white;
+  padding: 25px;
+  border-radius: 12px;
+  box-shadow: 0px 5px 15px rgba(0,0,0,0.05);
+}
+
+.info-box h4 {
+  margin-bottom: 15px;
+}
+
+.info-box ul {
+  list-style: none;
+  padding: 0;
+}
+
+.info-box li {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+/* Form Card */
+.employee-form-card {
+  flex: 1;
+  background: white;
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: 0px 10px 25px rgba(0,0,0,0.08);
+}
+
+/* Form Groups */
+.form-group {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #444;
+}
+
+.form-group input {
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.form-group input:focus {
+  border-color: #4e73df;
+  outline: none;
+  box-shadow: 0 0 5px rgba(78,115,223,0.3);
+}
+
+/* Button */
+.submit-btn {
+  width: 100%;
+  padding: 14px;
+  background: linear-gradient(to right, #4e73df, #224abe);
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.submit-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0px 6px 15px rgba(0,0,0,0.2);
+}

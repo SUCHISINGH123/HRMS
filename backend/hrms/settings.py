@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     'corsheaders',
     'employees',
     'attendance',
+     'dashboard',
 ]
 
 MIDDLEWARE = [

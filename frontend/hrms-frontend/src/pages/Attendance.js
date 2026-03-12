@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import api from "../services/api";
+import "./Attendance.css";
 
 const Attendance = () => {
   const [employees, setEmployees] = useState([]);
@@ -12,14 +13,12 @@ const Attendance = () => {
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
 
-  // Load employees for dropdown
   useEffect(() => {
     api.get("/employees/")
       .then(res => setEmployees(res.data))
       .catch(() => setError("Failed to load employees"));
   }, []);
 
-  // Load attendance when employee changes
   useEffect(() => {
     if (employeeId) {
       setLoading(true);
@@ -47,107 +46,120 @@ const Attendance = () => {
     })
     .then(() => {
       setMessage("Attendance marked successfully");
-      setError("");     // 🔥 VERY IMPORTANT
       setDate("");
     })
     .catch(() => {
       setError("Failed to mark attendance");
-      setMessage("");   // optional but clean
     });
-      
   };
 
   return (
-    <div>
-      <h2>Attendance Management</h2>
+    <div className="attendance-container">
 
-      {/* Attendance Form */}
-      <form onSubmit={handleSubmit} style={styles.card}>
-        <h3>Mark Attendance</h3>
+      <div className="attendance-header">
+        <h2>Attendance Management</h2>
+        <p>Mark and track employee attendance records</p>
+      </div>
 
-        <select
-          value={employeeId}
-          onChange={(e) => setEmployeeId(e.target.value)}
-          required
-        >
-          <option value="">Select Employee</option>
-          {employees.map(emp => (
-            <option key={emp.id} value={emp.id}>
-              {emp.full_name} ({emp.employee_id})
-            </option>
-          ))}
-        </select>
+      <div className="attendance-grid">
 
-        <br /><br />
+        {/* Mark Attendance Card */}
+        <div className="card">
+          <h3>Mark Attendance</h3>
 
-        <input
-          type="date"
-          value={date}
-          onChange={(e) => setDate(e.target.value)}
-          required
-        />
+          <form onSubmit={handleSubmit} className="attendance-form">
 
-        <br /><br />
+            <div className="form-group">
+              <label>Select Employee</label>
+              <select
+                value={employeeId}
+                onChange={(e) => setEmployeeId(e.target.value)}
+                required
+              >
+                <option value="">Choose employee</option>
+                {employees.map(emp => (
+                  <option key={emp.id} value={emp.id}>
+                    {emp.full_name} ({emp.employee_id})
+                  </option>
+                ))}
+              </select>
+            </div>
 
-        <select
-          value={status}
-          onChange={(e) => setStatus(e.target.value)}
-        >
-          <option value="Present">Present</option>
-          <option value="Absent">Absent</option>
-        </select>
+            <div className="form-group">
+              <label>Date</label>
+              <input
+                type="date"
+                value={date}
+                onChange={(e) => setDate(e.target.value)}
+                required
+              />
+            </div>
 
-        <br /><br />
+            <div className="form-group">
+              <label>Status</label>
+              <select
+                value={status}
+                onChange={(e) => setStatus(e.target.value)}
+              >
+                <option value="Present">Present</option>
+                <option value="Absent">Absent</option>
+              </select>
+            </div>
 
-        <button type="submit">Submit Attendance</button>
+            <button type="submit" className="btn-primary">
+              Submit Attendance
+            </button>
 
-        {message && <p style={{ color: "green" }}>{message}</p>}
-        {error && <p style={{ color: "red" }}>{error}</p>}
-      </form>
+            {message && <div className="alert success">{message}</div>}
+            {error && <div className="alert error">{error}</div>}
 
-      {/* Attendance Records */}
-      <div style={styles.card}>
-        <h3>Attendance Records</h3>
+          </form>
+        </div>
 
-        {!employeeId && <p>Select an employee to view attendance.</p>}
+        {/* Attendance Records */}
+        <div className="card">
+          <h3>Attendance Records</h3>
 
-        {loading && <p>Loading attendance...</p>}
+          {!employeeId && <p className="info-text">Select an employee to view attendance.</p>}
+          {loading && <p className="info-text">Loading attendance...</p>}
 
-        {!loading && employeeId && attendance.length === 0 && (
-          <p>No attendance records found.</p>
-        )}
+          {!loading && employeeId && attendance.length === 0 && (
+            <p className="info-text">No attendance records found.</p>
+          )}
 
-        {!loading && attendance.length > 0 && (
-          <table width="100%" border="1" cellPadding="10">
-            <thead>
-              <tr>
-                <th>Date</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              {attendance.map(record => (
-                <tr key={record.id}>
-                  <td>{record.date}</td>
-                  <td>{record.status}</td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        )}
+          {!loading && attendance.length > 0 && (
+            <div className="table-wrapper">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {attendance.map(record => (
+                    <tr key={record.id}>
+                      <td>{record.date}</td>
+                      <td>
+                        <span className={
+                          record.status === "Present"
+                            ? "badge present"
+                            : "badge absent"
+                        }>
+                          {record.status}
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
+            </div>
+          )}
+        </div>
+
       </div>
     </div>
   );
-};
-
-const styles = {
-  card: {
-    background: "#f9fafb",
-    padding: "20px",
-    marginBottom: "20px",
-    borderRadius: "8px",
-    border: "1px solid #e5e7eb"
-  }
 };
 
 export default Attendance;

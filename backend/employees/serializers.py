@@ -7,10 +7,19 @@ class EmployeeSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def validate(self, data):
+
+        # Agar update case hai to allow karo
+        if self.instance:
+            return data
+
+        # Sirf create case me required check karo
         if not data.get('employee_id'):
             raise serializers.ValidationError("Employee ID is required.")
+
         if not data.get('full_name'):
             raise serializers.ValidationError("Full name is required.")
+
         if not data.get('email'):
             raise serializers.ValidationError("Email is required.")
+
         return data

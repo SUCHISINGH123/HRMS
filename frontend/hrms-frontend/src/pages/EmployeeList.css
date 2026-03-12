@@ -1,0 +1,157 @@
+/* Page Layout */
+.employee-container {
+  padding: 30px;
+  background-color: #f4f6f9;
+  min-height: 100vh;
+}
+
+/* Header Section */
+.employee-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+}
+
+.employee-header h2 {
+  font-weight: 600;
+  color: #333;
+}
+
+.add-btn {
+  background-color: #4e73df;
+  color: white;
+  border: none;
+  padding: 8px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.add-btn:hover {
+  background-color: #2e59d9;
+}
+
+/* Card */
+.employee-card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+/* Table */
+.employee-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.employee-table thead {
+  background-color: #f8f9fc;
+}
+
+.employee-table th,
+.employee-table td {
+  padding: 12px;
+  text-align: left;
+}
+
+.employee-table th {
+  font-weight: 600;
+  color: #444;
+  border-bottom: 2px solid #e3e6f0;
+}
+
+.employee-table tbody tr {
+  border-bottom: 1px solid #eee;
+  transition: 0.2s;
+}
+
+.employee-table tbody tr:hover {
+  background-color: #f2f2f2;
+}
+
+/* Buttons */
+.edit-btn {
+  background-color: #1cc88a;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  margin-right: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.edit-btn:hover {
+  background-color: #17a673;
+}
+
+.delete-btn {
+  background-color: #e74a3b;
+  color: white;
+  border: none;
+  padding: 5px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+}
+
+.no-data {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 80px;
+  z-index: 9999;
+}
+
+.modal-card {
+  background: #fff;
+  width: 400px;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.modal-card h3 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.modal-card input {
+  width: 100%;
+  padding: 8px;
+  margin: 8px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}

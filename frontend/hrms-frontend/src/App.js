@@ -1,22 +1,26 @@
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import './App.css';
+
+
+import Dashboard from "./pages/Dashboard";
 import EmployeeList from "./pages/EmployeeList";
 import AddEmployee from "./pages/AddEmployee";
 import Attendance from "./pages/Attendance";
-import Navbar from "./components/Navbar";
+
 
 function App() {
   return (
-    <Router>
-      <Navbar />
-      <div style={{ padding: "20px" }}>
+    <BrowserRouter>
+      <Layout>
         <Routes>
-          <Route path="/" element={<EmployeeList />} />
+          <Route path="/" element={<Dashboard />} />
           <Route path="/employees" element={<EmployeeList />} />
-          <Route path="/employees/add" element={<AddEmployee />} />
+          <Route path="/add-employee" element={<AddEmployee />} />
           <Route path="/attendance" element={<Attendance />} />
         </Routes>
-      </div>
-    </Router>
+      </Layout>
+    </BrowserRouter>
   );
 }
 
