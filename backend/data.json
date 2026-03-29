@@ -1,0 +1,380 @@
+[
+{
+  "model": "employees.employee",
+  "pk": 1,
+  "fields": {
+    "employee_id": "001",
+    "full_name": "suchi singh",
+    "email": "suchisingh3227@gmail.com",
+    "department": "Softer Developer"
+  }
+},
+{
+  "model": "employees.employee",
+  "pk": 2,
+  "fields": {
+    "employee_id": "002",
+    "full_name": "sumi singh",
+    "email": "sumisingh@gmail.com",
+    "department": "HR"
+  }
+},
+{
+  "model": "employees.employee",
+  "pk": 3,
+  "fields": {
+    "employee_id": "003",
+    "full_name": "siddhi singh",
+    "email": "siddhi@gmail.com",
+    "department": "Softer Developement"
+  }
+},
+{
+  "model": "employees.employee",
+  "pk": 4,
+  "fields": {
+    "employee_id": "004",
+    "full_name": "swarnika singh",
+    "email": "swarnika@gmail.com",
+    "department": "HR"
+  }
+},
+{
+  "model": "employees.employee",
+  "pk": 6,
+  "fields": {
+    "employee_id": "005",
+    "full_name": "Ankit",
+    "email": "Ankit123@gmail.com",
+    "department": "HR"
+  }
+},
+{
+  "model": "employees.employee",
+  "pk": 7,
+  "fields": {
+    "employee_id": "007",
+    "full_name": "Suman",
+    "email": "suman@gmail.com",
+    "department": "computer science"
+  }
+},
+{
+  "model": "employees.employee",
+  "pk": 8,
+  "fields": {
+    "employee_id": "Nikhi",
+    "full_name": "Kumar",
+    "email": "Nikhil543@gmail.com",
+    "department": "Manual Testing"
+  }
+},
+{
+  "model": "employees.employee",
+  "pk": 9,
+  "fields": {
+    "employee_id": "009",
+    "full_name": "Monika Dubey",
+    "email": "sfsfs@jhghjgjh.fufhb",
+    "department": "Accountant"
+  }
+},
+{
+  "model": "employees.employee",
+  "pk": 10,
+  "fields": {
+    "employee_id": "010",
+    "full_name": "Sundar",
+    "email": "sunadr123@gmail.com",
+    "department": "Accountant"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 1,
+  "fields": {
+    "employee": 1,
+    "date": "2026-02-18",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 2,
+  "fields": {
+    "employee": 2,
+    "date": "2026-02-18",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 3,
+  "fields": {
+    "employee": 1,
+    "date": "2026-02-17",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 4,
+  "fields": {
+    "employee": 2,
+    "date": "2026-02-17",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 5,
+  "fields": {
+    "employee": 3,
+    "date": "2026-02-17",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 6,
+  "fields": {
+    "employee": 4,
+    "date": "2026-02-17",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 7,
+  "fields": {
+    "employee": 1,
+    "date": "2026-02-16",
+    "status": "Absent"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 8,
+  "fields": {
+    "employee": 2,
+    "date": "2026-02-16",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 9,
+  "fields": {
+    "employee": 3,
+    "date": "2026-02-16",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 10,
+  "fields": {
+    "employee": 4,
+    "date": "2026-02-16",
+    "status": "Absent"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 11,
+  "fields": {
+    "employee": 4,
+    "date": "2026-02-18",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 12,
+  "fields": {
+    "employee": 4,
+    "date": "2026-02-15",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 13,
+  "fields": {
+    "employee": 1,
+    "date": "2026-02-19",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 14,
+  "fields": {
+    "employee": 2,
+    "date": "2026-02-19",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 15,
+  "fields": {
+    "employee": 3,
+    "date": "2026-02-19",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 16,
+  "fields": {
+    "employee": 4,
+    "date": "2026-02-19",
+    "status": "Absent"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 18,
+  "fields": {
+    "employee": 6,
+    "date": "2026-02-19",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 19,
+  "fields": {
+    "employee": 7,
+    "date": "2026-02-19",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 20,
+  "fields": {
+    "employee": 4,
+    "date": "2026-02-20",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 21,
+  "fields": {
+    "employee": 1,
+    "date": "2026-01-01",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 22,
+  "fields": {
+    "employee": 2,
+    "date": "2026-01-01",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 23,
+  "fields": {
+    "employee": 2,
+    "date": "2026-01-02",
+    "status": "Absent"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 24,
+  "fields": {
+    "employee": 10,
+    "date": "2026-02-22",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 25,
+  "fields": {
+    "employee": 1,
+    "date": "2026-03-12",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 26,
+  "fields": {
+    "employee": 2,
+    "date": "2026-03-12",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 27,
+  "fields": {
+    "employee": 3,
+    "date": "2026-03-12",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 28,
+  "fields": {
+    "employee": 4,
+    "date": "2026-03-12",
+    "status": "Absent"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 29,
+  "fields": {
+    "employee": 6,
+    "date": "2026-03-11",
+    "status": "Absent"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 30,
+  "fields": {
+    "employee": 6,
+    "date": "2026-03-12",
+    "status": "Absent"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 31,
+  "fields": {
+    "employee": 1,
+    "date": "2026-03-11",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 32,
+  "fields": {
+    "employee": 1,
+    "date": "2026-03-09",
+    "status": "Present"
+  }
+},
+{
+  "model": "attendance.attendance",
+  "pk": 33,
+  "fields": {
+    "employee": 1,
+    "date": "2026-03-01",
+    "status": "Present"
+  }
+}
+]
